@@ -12,9 +12,10 @@ package sintaxe;
 public class TiposPrimitivos {
 
     public static void main(String[] args) {
-        byte idade = 127;
+        byte idade = -127;
         short nPais = 32767;
         int nAluno = -2147483648;
+        Integer nAlunos2;
         long nHabitante = 1000000000000000000L;
 
         float salario = 1000.35f;
