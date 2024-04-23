@@ -10,10 +10,10 @@ package banco;
  * @author tulio
  */
 public class Funcionario {
-    
+
     private String nomeFuncionario, departamento, dataEntrada, RG;
     private double salario;
-    private boolean ativo=true;
+    private boolean ativo = true;
 
     public String getNomeFuncionario() {
         return nomeFuncionario;
@@ -62,25 +62,27 @@ public class Funcionario {
     public void setAtivo(boolean ativo) {
         this.ativo = ativo;
     }
-    
-    
-    
-    public void bonifica(double aumento){
-        this.salario = this.salario+aumento;
+
+    public void bonifica(double aumento) {
+        this.salario = this.salario + aumento;
     }
-    
-    public void demite(){
+
+    public void demite() {
         this.ativo = false;
     }
-    
-    public void mostra(){
+
+    public double getBonificacao() {
+        return this.salario * 0.10;
+    }
+
+    public void mostra() {
         System.out.println("Relatório Funcionário");
-        System.out.println("Nome: "+this.getNomeFuncionario());
-        System.out.println("RG: "+this.getRG());
-        System.out.println("Departamento: "+this.getDepartamento());
-        System.out.println("Data Entrada: "+this.getDataEntrada());
-        System.out.println("Ativo: "+(this.isAtivo()==true?"Sim":"Não"));//operador ternário
+        System.out.println("Nome: " + this.getNomeFuncionario());
+        System.out.println("RG: " + this.getRG());
+        System.out.println("Departamento: " + this.getDepartamento());
+        System.out.println("Data Entrada: " + this.getDataEntrada());
+        System.out.println("Ativo: " + (this.isAtivo() == true ? "Sim" : "Não"));//operador ternário
         System.out.println("------------------------------------------");
     }
-    
+
 }
